@@ -278,7 +278,7 @@ class StartHelpHandlers:
                 # If user somehow has subscription, inform them
                 await query.edit_message_text(
                     text="🎉 لديك اشتراك نشط بالفعل! لا حاجة للفترة التجريبية.",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]])
                 )
             elif not trial_claimed:
                 # Grant 1-day free trial, attributed to admin
@@ -304,21 +304,21 @@ class StartHelpHandlers:
                         # Edit the original message to confirm trial grant to the user
                         await query.edit_message_text(
                             text="🎉 لقد حصلت بنجاح على اشتراك تجريبي مجاني لمدة يوم واحد!",
-                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]])
                         )
                     else:
                         # Handle case where DB update failed
                         logger.error(f"Failed to mark trial claimed in DB for user {user_id} after granting subscription.")
                         await query.edit_message_text(
                             text="⚠️ حدث خطأ أثناء تسجيل الفترة التجريبية. تم منح الاشتراك ولكن يرجى التواصل مع المشرف.",
-                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]])
                         )
                 else:
                     # Handle case where subscription grant failed
                     logger.error(f"Failed to grant free trial subscription via button for user: {user_id}")
                     await query.edit_message_text(
                         text="❌ حدث خطأ أثناء محاولة منح الفترة التجريبية. يرجى المحاولة مرة أخرى أو التواصل مع المشرف.",
-                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]])
                     )
             else: # trial_claimed is True
                 # Inform user trial already claimed, provide contact button
@@ -350,7 +350,7 @@ class StartHelpHandlers:
                     # If admin link couldn't be fetched, add a note to the message
                     message_text += "\n\n(تعذر جلب رابط التواصل مع المشرف)"
 
-                keyboard.append([InlineKeyboardButton("🔙 العودة", callback_data="start_back")])
+                keyboard.append([InlineKeyboardButton("🔙 العودة", callback_data="start_command")])
                 reply_markup = InlineKeyboardMarkup(keyboard)
 
                 try:
@@ -395,7 +395,7 @@ class StartHelpHandlers:
                 if existing_request:
                     await query.edit_message_text(
                         text="⚠️ لديك بالفعل طلب اشتراك معلق. يرجى الانتظار حتى يتم معالجته.",
-                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]])
                     )
                     conn.close()
                     return
@@ -417,7 +417,7 @@ class StartHelpHandlers:
                 await query.edit_message_text(
                     text="✅ تم إرسال طلب الاشتراك الخاص بك إلى المشرف. سيتم التواصل معك قريباً."
                     # Keep the back button from the original logic if needed, or remove reply_markup
-                    # reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]) 
+                    # reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]]) 
                 )
 
                 # 3. Fetch admin details for the second message
@@ -441,11 +441,11 @@ class StartHelpHandlers:
                 if admin_link:
                     keyboard = [[InlineKeyboardButton(f"💬 تواصل مع {admin_username_mention}", url=admin_link)]]
                     # Add back button to the second message as well?
-                    keyboard.append([InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")])
+                    keyboard.append([InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_command")])
                     reply_markup_second = InlineKeyboardMarkup(keyboard)
                 else:
                     # If no link, just provide back button
-                    reply_markup_second = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")]])
+                    reply_markup_second = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_command")]])
 
 
                 await context.bot.send_message(
@@ -496,7 +496,7 @@ class StartHelpHandlers:
                 logger.error(f"SQLite error processing subscription request for user {user_id}: {db_err}")
                 await query.edit_message_text(
                     text="❌ حدث خطأ في قاعدة البيانات أثناء تسجيل طلب الاشتراك. يرجى المحاولة مرة أخرى.",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]])
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]])
                 )
             except Exception as e:
                 logger.error(f"Error processing subscription request or notifying admin (start_handler): {e}")
@@ -509,7 +509,7 @@ class StartHelpHandlers:
                 await context.bot.send_message(
                     chat_id=user_id,
                     text="❌ حدث خطأ أثناء إرسال طلب الاشتراك. يرجى المحاولة مرة أخرى أو التواصل مع المشرف مباشرة.",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_back")]])
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔙 العودة للقائمة الرئيسية", callback_data="start_command")]])
                 )
 
         # Keep original start_help logic
@@ -591,7 +591,7 @@ class StartHelpHandlers:
 
                 if not groups:
                     keyboard = [[InlineKeyboardButton("🔄 تحديث المجموعات", callback_data="start_refresh_groups")],
-                               [InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
+                               [InlineKeyboardButton("🔙 العودة", callback_data="start_command")]]
                     reply_markup = InlineKeyboardMarkup(keyboard)
                     await query.edit_message_text(
                         text="👥 *المجموعات*\n\nلم يتم العثور على مجموعات. يرجى تحديث المجموعات أولاً.",
@@ -609,7 +609,7 @@ class StartHelpHandlers:
                         keyboard.append([InlineKeyboardButton(f"{emoji} {group_name}", callback_data=f"group:{group_id}")])
 
                     keyboard.append([InlineKeyboardButton("🔄 تحديث المجموعات", callback_data="start_refresh_groups")])
-                    keyboard.append([InlineKeyboardButton("🔙 العودة", callback_data="start_back")])
+                    keyboard.append([InlineKeyboardButton("🔙 العودة", callback_data="start_command")])
 
                     reply_markup = InlineKeyboardMarkup(keyboard)
                     await query.edit_message_text(
@@ -647,7 +647,7 @@ class StartHelpHandlers:
                 await context.bot.posting_handlers.start_post(update, context)
             else:
                 # إذا لم يكن معالج النشر متاحاً، عرض رسالة بديلة
-                keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
+                keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]]
                 reply_markup = InlineKeyboardMarkup(keyboard)
                 await query.edit_message_text(
                     text="📝 *النشر في المجموعات*\n\nيرجى استخدام الأمر /post لبدء النشر في المجموعات.",
@@ -662,7 +662,7 @@ class StartHelpHandlers:
                 await context.bot.response_handlers.auto_response_command(update, context)
             else:
                 # إذا لم يكن معالج الردود التلقائية متاحاً، عرض رسالة بديلة
-                keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
+                keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]]
                 reply_markup = InlineKeyboardMarkup(keyboard)
                 await query.edit_message_text(
                     text="🤖 *الردود التلقائية*\n\nيمكنك إعداد ردود تلقائية للرسائل الواردة.",
@@ -695,7 +695,7 @@ class StartHelpHandlers:
                         group_name = group.get('title', 'مجموعة بدون اسم')
                         keyboard.append([InlineKeyboardButton(f"🟢 {group_name}", callback_data=f"group:{group_id}")])
 
-                    keyboard.append([InlineKeyboardButton("🔙 العودة", callback_data="start_back")])
+                    keyboard.append([InlineKeyboardButton("🔙 العودة", callback_data="start_command")])
 
                     reply_markup = InlineKeyboardMarkup(keyboard)
                     await query.edit_message_text(
@@ -704,7 +704,7 @@ class StartHelpHandlers:
                     )
                 else:
                     # عرض رسالة الخطأ
-                    keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
+                    keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]]
                     reply_markup = InlineKeyboardMarkup(keyboard)
                     await query.edit_message_text(
                         text=f"❌ {result_message}",
@@ -721,7 +721,7 @@ class StartHelpHandlers:
                 user_id = update.effective_user.id
                 status = self.posting_service.get_posting_status(user_id)
 
-                keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_back")]]
+                keyboard = [[InlineKeyboardButton("🔙 العودة", callback_data="start_command")]]
                 reply_markup = InlineKeyboardMarkup(keyboard)
 
                 if status and status.get('is_active', False):
@@ -748,7 +748,7 @@ class StartHelpHandlers:
                     [InlineKeyboardButton("👥 إدارة المستخدمين", callback_data="admin_users")],
                     [InlineKeyboardButton("📢 إرسال رسالة جماعية", callback_data="admin_broadcast")],
                     [InlineKeyboardButton("📊 إحصائيات", callback_data="admin_stats")],
-                    [InlineKeyboardButton("🔙 العودة", callback_data="start_back")]
+                    [InlineKeyboardButton("🔙 العودة", callback_data="start_command")]
                 ]
                 reply_markup = InlineKeyboardMarkup(keyboard)
                 await query.edit_message_text(
@@ -815,7 +815,7 @@ class StartHelpHandlers:
             keyboard = [
                 [InlineKeyboardButton("🔗 Session String Generator", url="https://telegram.tools/session-string-generator#telethon,user")],
                 [InlineKeyboardButton("🌐 my.telegram.org", url="https://my.telegram.org")],
-                [InlineKeyboardButton("🔙 العودة", callback_data="start_back")] # Back to main start menu
+                [InlineKeyboardButton("🔙 العودة", callback_data="start_command")] # Back to main start menu
             ]
             reply_markup = InlineKeyboardMarkup(keyboard)
             
