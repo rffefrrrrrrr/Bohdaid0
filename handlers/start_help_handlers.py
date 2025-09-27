@@ -150,7 +150,7 @@ class StartHelpHandlers:
                 button_text = f"🔔 طلب اشتراك (تواصل مع @{admin_username})" if admin_username else "🔔 طلب اشتراك (تواصل مع المشرف)"
             except Exception as e:
                 logger.error(f"Error fetching admin username: {e}") # Use logger
-                button_text = "🔔 طلب اشتراك (تواصل مع المشرف)" # Fallback on error
+                button_text = "🔔 طلب اشتراك (تواصل مع المشرف)"
             
             keyboard.append([
                 InlineKeyboardButton(button_text, callback_data="start_subscription")
@@ -159,6 +159,11 @@ class StartHelpHandlers:
         # Add Usage Info button
         keyboard.append([
             InlineKeyboardButton("ℹ️ معلومات الاستخدام", callback_data="start_usage_info")
+        ])
+
+        # Add 'أوامر النشر' button
+        keyboard.append([
+            InlineKeyboardButton("🚀 أوامر النشر", callback_data="start_publishing_commands")
         ])
 
         # Always add Help button
@@ -197,11 +202,7 @@ class StartHelpHandlers:
 
         # Create keyboard with help categories (Keep original)
         keyboard = [
-            [InlineKeyboardButton("🔑 أوامر الحساب", callback_data="help_account")],
-            [InlineKeyboardButton("👥 أوامر المجموعات", callback_data="help_groups")],
-            [InlineKeyboardButton("📝 أوامر النشر", callback_data="help_posting")],
-            [InlineKeyboardButton("🤖 أوامر الردود", callback_data="help_responses")],
-            [InlineKeyboardButton("🔗 أوامر الإحالات", callback_data="help_referrals")] # Keep this button
+            [InlineKeyboardButton("🔙 العودة للبداية", callback_data="start_back")]
         ]
 
         # Add admin button if user is admin
@@ -872,6 +873,10 @@ class StartHelpHandlers:
                 logger.error(f"Error editing message for start_usage_info: {e}") # Use logger
                 # Fallback or log error
                 
+        # Handle publishing commands menu
+        elif data == "start_publishing_commands":
+            await self.publishing_commands_menu(update, context, is_admin)
+
         # Keep original start_back logic
         elif data == "start_back":
             # Regenerate the main menu using query.edit_message_text
@@ -1170,4 +1175,35 @@ class StartHelpHandlers:
                 logger.error(f"Error editing message in help_back_to_start: {e}") # Use logger
                 # Fallback: maybe send a new message if edit fails? Or just log.
                 # For now, just log the error.
+
+
+
+    async def publishing_commands_menu(self, update: Update, context: CallbackContext, is_admin: bool):
+        keyboard = [
+            [InlineKeyboardButton("🔑 الحساب", callback_data="help_account")],
+            [InlineKeyboardButton("👥 المجموعات", callback_data="help_groups")],
+            [InlineKeyboardButton("📝 النشر", callback_data="help_posting")],
+            [InlineKeyboardButton("🤖 الردود", callback_data="help_responses")],
+            [InlineKeyboardButton("🔗 الإحالات", callback_data="help_referrals")]
+        ]
+
+        if is_admin:
+            keyboard.append([
+                InlineKeyboardButton("👨‍💼 المشرف", callback_data="help_admin")
+            ])
+
+        keyboard.append([
+            InlineKeyboardButton("🔙 العودة", callback_data="start_back")
+        ])
+
+        reply_markup = InlineKeyboardMarkup(keyboard)
+        await context.bot.edit_message_text(
+            chat_id=update.effective_chat.id,
+            message_id=update.callback_query.message.message_id,
+            text="🚀 \*قائمة أوامر النشر:\*
+\\nاختر الفئة التي تريد استعراض أوامرها:\",
+            reply_markup=reply_markup,
+            parse_mode="MarkdownV2"
+        )
+
 
