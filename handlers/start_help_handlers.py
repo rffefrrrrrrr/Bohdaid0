@@ -70,7 +70,8 @@ class StartHelpHandlers:
         self.dispatcher.add_handler(CommandHandler("api_info", self.api_info_command)) # Keep api_info command handler
 
         # Register callback queries - MODIFIED: Add referral_ pattern
-        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|referral_|start_command)')) # Use raw string
+        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|referral_)')) # Use raw string
+        self.dispatcher.add_handler(CallbackQueryHandler(self.start_command, pattern=r'^start_command$'))
 
     # Keep original start_command
     async def start_command(self, update: Update, context: CallbackContext):
@@ -176,6 +177,8 @@ class StartHelpHandlers:
                 reply_markup=reply_markup,
                 parse_mode="MarkdownV2"
             )
+            # Answer the callback query to remove the loading animation
+            await update.callback_query.answer()
 
 
 
