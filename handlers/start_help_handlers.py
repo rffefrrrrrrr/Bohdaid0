@@ -66,11 +66,11 @@ class StartHelpHandlers:
     def register_handlers(self):
         # Register start and help commands (Keep original)
         self.dispatcher.add_handler(CommandHandler("start", self.start_command))
-        self.dispatcher.add_handler(CommandHandler("help", self.help_command))
+
         self.dispatcher.add_handler(CommandHandler("api_info", self.api_info_command)) # Keep api_info command handler
 
         # Register callback queries - MODIFIED: Add referral_ pattern
-        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|help_|referral_)')) # Use raw string and add referral_
+        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|referral_)')) # Use raw string
 
     # Keep original start_command
     async def start_command(self, update: Update, context: CallbackContext):
@@ -166,9 +166,9 @@ class StartHelpHandlers:
             InlineKeyboardButton("🚀 أوامر النشر", callback_data="start_publishing_commands")
         ])
 
-        # Always add Help button
+        # Add button to contact the owner
         keyboard.append([
-            InlineKeyboardButton("📋 المساعدة", callback_data="start_help")
+            InlineKeyboardButton("💬 تواصل مع المالك", url=f"https://t.me/{context.bot.username}")
         ])
 
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -187,41 +187,7 @@ class StartHelpHandlers:
                  reply_markup=reply_markup
              )
 
-    # Keep original help_command
-    async def help_command(self, update: Update, context: CallbackContext):
-        """Handle the /help command with interactive buttons"""
-        user = update.effective_user
-        user_id = user.id
 
-        # Get user from database
-        db_user = self.subscription_service.get_user(user_id)
-        is_admin = db_user and db_user.is_admin
-        has_subscription = db_user and db_user.has_active_subscription()
-
-        help_text = "📋 قائمة الأوامر المتاحة:\n\n"
-
-        # Create keyboard with help categories (Keep original)
-        keyboard = [
-            [InlineKeyboardButton("🔙 العودة للبداية", callback_data="start_back")]
-        ]
-
-        # Add admin button if user is admin
-        if is_admin:
-            keyboard.append([
-                InlineKeyboardButton("👨‍💼 أوامر المشرف", callback_data="help_admin")
-            ])
-
-        # Add back to start button
-        keyboard.append([
-            InlineKeyboardButton("🔙 العودة للبداية", callback_data="help_back_to_start")
-        ])
-
-        reply_markup = InlineKeyboardMarkup(keyboard)
-
-        await update.message.reply_text(
-            text=help_text,
-            reply_markup=reply_markup
-        )
 
     # Keep original api_info_command
     async def api_info_command(self, update: Update, context: CallbackContext):
@@ -1083,10 +1049,7 @@ class StartHelpHandlers:
                         InlineKeyboardButton("👨‍💼 أوامر المشرف", callback_data="help_admin")
                     ])
 
-                # Add back to start button
-                keyboard.append([
-                    InlineKeyboardButton("🔙 العودة للبداية", callback_data="help_back_to_start")
-                ])
+
 
                 reply_markup = InlineKeyboardMarkup(keyboard)
 
