@@ -1,0 +1,422 @@
+[
+    {
+        "user_id": 8027649725,
+        "response_type": "greetings",
+        "response_text": "اي,هنا",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.699611",
+        "updated_at": "2025-04-16 00:23:47.743711",
+        "_id": 1,
+        "sqlite_id": 1
+    },
+    {
+        "user_id": 8027649725,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.704142",
+        "updated_at": "2025-04-16 00:10:20.704142",
+        "_id": 2,
+        "sqlite_id": 2
+    },
+    {
+        "user_id": 8027649725,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.708650",
+        "updated_at": "2025-04-16 00:10:20.708650",
+        "_id": 3,
+        "sqlite_id": 3
+    },
+    {
+        "user_id": 8027649725,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.712163",
+        "updated_at": "2025-04-16 00:10:20.712163",
+        "_id": 4,
+        "sqlite_id": 4
+    },
+    {
+        "user_id": 8027649725,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.716679",
+        "updated_at": "2025-04-16 00:10:20.716679",
+        "_id": 5,
+        "sqlite_id": 5
+    },
+    {
+        "user_id": 8027649725,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-04-16 01:31:36.718005",
+        "updated_at": "2025-04-16 01:31:36.718005",
+        "_id": 6,
+        "sqlite_id": 6
+    },
+    {
+        "user_id": 7207131508,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.217499",
+        "updated_at": "2025-05-04 13:34:07.217505",
+        "_id": 7,
+        "sqlite_id": 7
+    },
+    {
+        "user_id": 7207131508,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.222675",
+        "updated_at": "2025-05-04 13:34:07.222681",
+        "_id": 8,
+        "sqlite_id": 8
+    },
+    {
+        "user_id": 7207131508,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.227021",
+        "updated_at": "2025-05-04 13:34:07.227025",
+        "_id": 9,
+        "sqlite_id": 9
+    },
+    {
+        "user_id": 7207131508,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.231267",
+        "updated_at": "2025-05-04 13:34:07.231271",
+        "_id": 10,
+        "sqlite_id": 10
+    },
+    {
+        "user_id": 7207131508,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.235703",
+        "updated_at": "2025-05-04 13:34:07.235707",
+        "_id": 11,
+        "sqlite_id": 11
+    },
+    {
+        "user_id": 7207131508,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.239964",
+        "updated_at": "2025-05-04 13:34:07.239968",
+        "_id": 12,
+        "sqlite_id": 12
+    },
+    {
+        "user_id": 1376292453,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.066627",
+        "updated_at": "2025-05-13 04:34:16.066634",
+        "_id": 13,
+        "sqlite_id": 13
+    },
+    {
+        "user_id": 1376292453,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.079106",
+        "updated_at": "2025-05-13 04:34:16.079116",
+        "_id": 14,
+        "sqlite_id": 14
+    },
+    {
+        "user_id": 1376292453,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.091365",
+        "updated_at": "2025-05-13 04:34:16.091376",
+        "_id": 15,
+        "sqlite_id": 15
+    },
+    {
+        "user_id": 1376292453,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.103691",
+        "updated_at": "2025-05-13 04:34:16.103701",
+        "_id": 16,
+        "sqlite_id": 16
+    },
+    {
+        "user_id": 1376292453,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.115968",
+        "updated_at": "2025-05-13 04:34:16.115978",
+        "_id": 17,
+        "sqlite_id": 17
+    },
+    {
+        "user_id": 1376292453,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.128424",
+        "updated_at": "2025-05-13 04:36:41.953232",
+        "_id": 18,
+        "sqlite_id": 18
+    },
+    {
+        "user_id": 7453528169,
+        "response_type": "greetings",
+        "response_text": "https://t.me/JxxPJ",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.155609",
+        "updated_at": "2025-05-13 19:39:47.541926",
+        "_id": 19,
+        "sqlite_id": 19
+    },
+    {
+        "user_id": 7453528169,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.168321",
+        "updated_at": "2025-05-13 19:36:12.168329",
+        "_id": 20,
+        "sqlite_id": 20
+    },
+    {
+        "user_id": 7453528169,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.190504",
+        "updated_at": "2025-05-13 19:36:12.190512",
+        "_id": 21,
+        "sqlite_id": 21
+    },
+    {
+        "user_id": 7453528169,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.209795",
+        "updated_at": "2025-05-13 19:36:12.209804",
+        "_id": 22,
+        "sqlite_id": 22
+    },
+    {
+        "user_id": 7453528169,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.226341",
+        "updated_at": "2025-05-13 19:36:12.226351",
+        "_id": 23,
+        "sqlite_id": 23
+    },
+    {
+        "user_id": 7453528169,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.239310",
+        "updated_at": "2025-05-13 19:36:12.239320",
+        "_id": 24,
+        "sqlite_id": 24
+    },
+    {
+        "user_id": 6342611739,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.099229",
+        "updated_at": "2025-05-16 04:38:41.099235",
+        "_id": 25,
+        "sqlite_id": 25
+    },
+    {
+        "user_id": 6342611739,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.107909",
+        "updated_at": "2025-05-16 04:38:41.107913",
+        "_id": 26,
+        "sqlite_id": 26
+    },
+    {
+        "user_id": 6342611739,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.114122",
+        "updated_at": "2025-05-16 04:38:41.114126",
+        "_id": 27,
+        "sqlite_id": 27
+    },
+    {
+        "user_id": 6342611739,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.120011",
+        "updated_at": "2025-05-16 04:38:41.120015",
+        "_id": 28,
+        "sqlite_id": 28
+    },
+    {
+        "user_id": 6342611739,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.128170",
+        "updated_at": "2025-05-16 04:38:41.128174",
+        "_id": 29,
+        "sqlite_id": 29
+    },
+    {
+        "user_id": 6342611739,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.134531",
+        "updated_at": "2025-05-16 04:38:41.134535",
+        "_id": 30,
+        "sqlite_id": 30
+    },
+    {
+        "user_id": 7775957621,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:25.984691",
+        "updated_at": "2025-05-27 23:00:25.984697",
+        "_id": 31,
+        "sqlite_id": 31
+    },
+    {
+        "user_id": 7775957621,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:25.992199",
+        "updated_at": "2025-05-27 23:00:25.992204",
+        "_id": 32,
+        "sqlite_id": 32
+    },
+    {
+        "user_id": 7775957621,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:25.997951",
+        "updated_at": "2025-05-27 23:00:25.997956",
+        "_id": 33,
+        "sqlite_id": 33
+    },
+    {
+        "user_id": 7775957621,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:26.003696",
+        "updated_at": "2025-05-27 23:00:26.003701",
+        "_id": 34,
+        "sqlite_id": 34
+    },
+    {
+        "user_id": 7775957621,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:26.009072",
+        "updated_at": "2025-05-27 23:00:26.009076",
+        "_id": 35,
+        "sqlite_id": 35
+    },
+    {
+        "user_id": 7775957621,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:26.014467",
+        "updated_at": "2025-05-27 23:00:26.014471",
+        "_id": 36,
+        "sqlite_id": 36
+    },
+    {
+        "user_id": 30124820,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.327903",
+        "updated_at": "2025-06-18 21:40:33.327907",
+        "_id": 37,
+        "sqlite_id": 37
+    },
+    {
+        "user_id": 30124820,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.335886",
+        "updated_at": "2025-06-18 21:40:33.335893",
+        "_id": 38,
+        "sqlite_id": 38
+    },
+    {
+        "user_id": 30124820,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.341257",
+        "updated_at": "2025-06-18 21:40:33.341261",
+        "_id": 39,
+        "sqlite_id": 39
+    },
+    {
+        "user_id": 30124820,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.346339",
+        "updated_at": "2025-06-18 21:40:33.346344",
+        "_id": 40,
+        "sqlite_id": 40
+    },
+    {
+        "user_id": 30124820,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.351588",
+        "updated_at": "2025-06-18 21:40:33.351591",
+        "_id": 41,
+        "sqlite_id": 41
+    },
+    {
+        "user_id": 30124820,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.356592",
+        "updated_at": "2025-06-18 21:40:33.356596",
+        "_id": 42,
+        "sqlite_id": 42
+    }
+]

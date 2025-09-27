@@ -1,0 +1,380 @@
+[
+    {
+        "id": 1,
+        "user_id": 8027649725,
+        "response_type": "greetings",
+        "response_text": "اي,هنا",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.699611",
+        "updated_at": "2025-04-16 00:23:47.743711"
+    },
+    {
+        "id": 2,
+        "user_id": 8027649725,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.704142",
+        "updated_at": "2025-04-16 00:10:20.704142"
+    },
+    {
+        "id": 3,
+        "user_id": 8027649725,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.708650",
+        "updated_at": "2025-04-16 00:10:20.708650"
+    },
+    {
+        "id": 4,
+        "user_id": 8027649725,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.712163",
+        "updated_at": "2025-04-16 00:10:20.712163"
+    },
+    {
+        "id": 5,
+        "user_id": 8027649725,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-04-16 00:10:20.716679",
+        "updated_at": "2025-04-16 00:10:20.716679"
+    },
+    {
+        "id": 6,
+        "user_id": 8027649725,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-04-16 01:31:36.718005",
+        "updated_at": "2025-04-16 01:31:36.718005"
+    },
+    {
+        "id": 7,
+        "user_id": 7207131508,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.217499",
+        "updated_at": "2025-05-04 13:34:07.217505"
+    },
+    {
+        "id": 8,
+        "user_id": 7207131508,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.222675",
+        "updated_at": "2025-05-04 13:34:07.222681"
+    },
+    {
+        "id": 9,
+        "user_id": 7207131508,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.227021",
+        "updated_at": "2025-05-04 13:34:07.227025"
+    },
+    {
+        "id": 10,
+        "user_id": 7207131508,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.231267",
+        "updated_at": "2025-05-04 13:34:07.231271"
+    },
+    {
+        "id": 11,
+        "user_id": 7207131508,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.235703",
+        "updated_at": "2025-05-04 13:34:07.235707"
+    },
+    {
+        "id": 12,
+        "user_id": 7207131508,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-04 13:34:07.239964",
+        "updated_at": "2025-05-04 13:34:07.239968"
+    },
+    {
+        "id": 13,
+        "user_id": 1376292453,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.066627",
+        "updated_at": "2025-05-13 04:34:16.066634"
+    },
+    {
+        "id": 14,
+        "user_id": 1376292453,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.079106",
+        "updated_at": "2025-05-13 04:34:16.079116"
+    },
+    {
+        "id": 15,
+        "user_id": 1376292453,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.091365",
+        "updated_at": "2025-05-13 04:34:16.091376"
+    },
+    {
+        "id": 16,
+        "user_id": 1376292453,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.103691",
+        "updated_at": "2025-05-13 04:34:16.103701"
+    },
+    {
+        "id": 17,
+        "user_id": 1376292453,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.115968",
+        "updated_at": "2025-05-13 04:34:16.115978"
+    },
+    {
+        "id": 18,
+        "user_id": 1376292453,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني",
+        "is_active": 1,
+        "created_at": "2025-05-13 04:34:16.128424",
+        "updated_at": "2025-05-13 04:36:41.953232"
+    },
+    {
+        "id": 19,
+        "user_id": 7453528169,
+        "response_type": "greetings",
+        "response_text": "https://t.me/JxxPJ",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.155609",
+        "updated_at": "2025-05-13 19:39:47.541926"
+    },
+    {
+        "id": 20,
+        "user_id": 7453528169,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.168321",
+        "updated_at": "2025-05-13 19:36:12.168329"
+    },
+    {
+        "id": 21,
+        "user_id": 7453528169,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.190504",
+        "updated_at": "2025-05-13 19:36:12.190512"
+    },
+    {
+        "id": 22,
+        "user_id": 7453528169,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.209795",
+        "updated_at": "2025-05-13 19:36:12.209804"
+    },
+    {
+        "id": 23,
+        "user_id": 7453528169,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.226341",
+        "updated_at": "2025-05-13 19:36:12.226351"
+    },
+    {
+        "id": 24,
+        "user_id": 7453528169,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-13 19:36:12.239310",
+        "updated_at": "2025-05-13 19:36:12.239320"
+    },
+    {
+        "id": 25,
+        "user_id": 6342611739,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.099229",
+        "updated_at": "2025-05-16 04:38:41.099235"
+    },
+    {
+        "id": 26,
+        "user_id": 6342611739,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.107909",
+        "updated_at": "2025-05-16 04:38:41.107913"
+    },
+    {
+        "id": 27,
+        "user_id": 6342611739,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.114122",
+        "updated_at": "2025-05-16 04:38:41.114126"
+    },
+    {
+        "id": 28,
+        "user_id": 6342611739,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.120011",
+        "updated_at": "2025-05-16 04:38:41.120015"
+    },
+    {
+        "id": 29,
+        "user_id": 6342611739,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.128170",
+        "updated_at": "2025-05-16 04:38:41.128174"
+    },
+    {
+        "id": 30,
+        "user_id": 6342611739,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-16 04:38:41.134531",
+        "updated_at": "2025-05-16 04:38:41.134535"
+    },
+    {
+        "id": 31,
+        "user_id": 7775957621,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:25.984691",
+        "updated_at": "2025-05-27 23:00:25.984697"
+    },
+    {
+        "id": 32,
+        "user_id": 7775957621,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:25.992199",
+        "updated_at": "2025-05-27 23:00:25.992204"
+    },
+    {
+        "id": 33,
+        "user_id": 7775957621,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:25.997951",
+        "updated_at": "2025-05-27 23:00:25.997956"
+    },
+    {
+        "id": 34,
+        "user_id": 7775957621,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:26.003696",
+        "updated_at": "2025-05-27 23:00:26.003701"
+    },
+    {
+        "id": 35,
+        "user_id": 7775957621,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:26.009072",
+        "updated_at": "2025-05-27 23:00:26.009076"
+    },
+    {
+        "id": 36,
+        "user_id": 7775957621,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-05-27 23:00:26.014467",
+        "updated_at": "2025-05-27 23:00:26.014471"
+    },
+    {
+        "id": 37,
+        "user_id": 30124820,
+        "response_type": "greetings",
+        "response_text": "موجود,تمام,أهلاً,مرحباً",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.327903",
+        "updated_at": "2025-06-18 21:40:33.327907"
+    },
+    {
+        "id": 38,
+        "user_id": 30124820,
+        "response_type": "affirmative",
+        "response_text": "نعم,أكيد,تمام,صحيح,بالضبط",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.335886",
+        "updated_at": "2025-06-18 21:40:33.335893"
+    },
+    {
+        "id": 39,
+        "user_id": 30124820,
+        "response_type": "negative",
+        "response_text": "لا,للأسف لا,مش متأكد,ما أعتقد",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.341257",
+        "updated_at": "2025-06-18 21:40:33.341261"
+    },
+    {
+        "id": 40,
+        "user_id": 30124820,
+        "response_type": "thanks",
+        "response_text": "شكراً,الله يسلمك,تسلم,مشكور",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.346339",
+        "updated_at": "2025-06-18 21:40:33.346344"
+    },
+    {
+        "id": 41,
+        "user_id": 30124820,
+        "response_type": "help",
+        "response_text": "جرب كذا,ممكن تحاول بطريقة ثانية,حاول مرة ثانية",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.351588",
+        "updated_at": "2025-06-18 21:40:33.351591"
+    },
+    {
+        "id": 42,
+        "user_id": 30124820,
+        "response_type": "private",
+        "response_text": "مش هنا انتظرني,مشغول شويه بحيك",
+        "is_active": 1,
+        "created_at": "2025-06-18 21:40:33.356592",
+        "updated_at": "2025-06-18 21:40:33.356596"
+    }
+]
