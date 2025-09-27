@@ -85,16 +85,27 @@ ModuleNotFoundError: No module named 'handlers.base_handler'
 
 ## كيفية استخدام البوت
 
-1. قم بتشغيل البوت باستخدام الأمر:
-```
-python main.py
-```
+1. **الحصول على API ID و API Hash:**
+   - اذهب إلى [my.telegram.org](https://my.telegram.org) وقم بتسجيل الدخول.
+   - اذهب إلى "API development tools" واملأ النموذج.
+   - ستحصل على `API ID` و `API Hash` الخاصين بك.
 
-2. استخدم الأوامر التالية:
+2. **الحصول على Session String:**
+   - اذهب إلى [telegram.tools/session-string-generator#telethon](https://telegram.tools/session-string-generator#telethon).
+   - أدخل `API ID` و `API Hash` اللذين حصلت عليهما في الخطوة السابقة.
+   - اتبع التعليمات للحصول على `Session String`.
+
+3. **تشغيل البوت وتسجيل الدخول:**
+   - قم بتشغيل البوت باستخدام الأمر:
+     ```
+     python main.py
+     ```
+   - استخدم `/login` واتبع التعليمات لإدخال `Session String`.
+
+4. **استخدم الأوامر التالية:**
    - `/start` - بدء استخدام البوت
-   - `/login` - تسجيل الدخول باستخدام API ID و API Hash
+   - `/login` - تسجيل الدخول باستخدام Session String
    - `/logout` - تسجيل الخروج
-   - `/generate_session` - إنشاء جلسة جديدة
    - `/post` - بدء النشر التلقائي
    - `/stop_posting` - إيقاف النشر التلقائي
 
@@ -103,3 +114,4 @@ python main.py
 1. عند إدخال رمز التحقق، يمكنك إدخاله مع أو بدون مسافات (مثل "1 2 3 4 5" أو "12345")
 2. في حالة انتهاء صلاحية الرمز، سيقوم البوت تلقائياً بطلب رمز جديد
 3. عند استخدام ميزة النشر التلقائي، سيستمر النشر بشكل متكرر حتى تقوم بإيقافه يدوياً باستخدام الأمر `/stop_posting`
+
