@@ -1200,8 +1200,7 @@ class StartHelpHandlers:
         await context.bot.edit_message_text(
             chat_id=update.effective_chat.id,
             message_id=update.callback_query.message.message_id,
-            text="🚀 \*قائمة أوامر النشر:\*
-\\nاختر الفئة التي تريد استعراض أوامرها:\",
+            text=escape_markdown_v2("🚀 قائمة أوامر النشر:\n\nاختر الفئة التي تريد استعراض أوامرها:"),
             reply_markup=reply_markup,
             parse_mode="MarkdownV2"
         )
