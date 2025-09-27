@@ -247,7 +247,7 @@ async def setup_commands(application):
     """Sets the bot commands to only /start and /help."""
     commands = [
         BotCommand("start", "بدء التفاعل مع البوت"),
-        BotCommand("help", "عرض قائمة المساعدة والأوامر"),
+
     ]
     try:
         await application.bot.set_my_commands(commands)

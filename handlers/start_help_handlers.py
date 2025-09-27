@@ -106,7 +106,9 @@ class StartHelpHandlers:
         has_subscription = db_user.has_active_subscription()
 
         # Create keyboard with options (Keep original)
-        keyboard = []
+        keyboard = [
+            [InlineKeyboardButton("🚀 أوامر النشر", callback_data="start_publishing_commands")]
+        ]
 
         # Always add referral button
         keyboard.append([
@@ -159,11 +161,6 @@ class StartHelpHandlers:
         # Add Usage Info button
         keyboard.append([
             InlineKeyboardButton("ℹ️ معلومات الاستخدام", callback_data="start_usage_info")
-        ])
-
-        # Add 'أوامر النشر' button
-        keyboard.append([
-            InlineKeyboardButton("🚀 أوامر النشر", callback_data="start_publishing_commands")
         ])
 
         # Add button to contact the owner
