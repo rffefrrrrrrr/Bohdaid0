@@ -70,7 +70,7 @@ class StartHelpHandlers:
         self.dispatcher.add_handler(CommandHandler("api_info", self.api_info_command)) # Keep api_info command handler
 
         # Register callback queries - MODIFIED: Add referral_ pattern
-        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|referral_)')) # Use raw string
+        self.dispatcher.add_handler(CallbackQueryHandler(self.start_help_callback, pattern=r'^(start_|referral_|start_command)')) # Use raw string
 
     # Keep original start_command
     async def start_command(self, update: Update, context: CallbackContext):
@@ -105,20 +105,12 @@ class StartHelpHandlers:
         # Check subscription status
         has_subscription = db_user.has_active_subscription()
 
-        # Create keyboard with options (Keep original)
+        # Create keyboard with options
         keyboard = [
-            [InlineKeyboardButton("🚀 أوامر النشر", callback_data="start_publishing_commands")]
+            [InlineKeyboardButton("🚀 أوامر النشر", callback_data="start_publishing_commands")],
+            [InlineKeyboardButton("🔗 الإحالة", callback_data="start_referral")],
+            [InlineKeyboardButton("🎁 الحصول على تجربة مجانية (يوم واحد)", callback_data="start_trial")]
         ]
-
-        # Always add referral button
-        keyboard.append([
-            InlineKeyboardButton("🔗 الإحالة", callback_data="start_referral")
-        ])
-
-        # Always add trial button
-        keyboard.append([
-            InlineKeyboardButton("🎁 الحصول على تجربة مجانية (يوم واحد)", callback_data="start_trial")
-        ])
 
         if has_subscription:
             # For subscribed users, add subscription info to text
@@ -178,11 +170,13 @@ class StartHelpHandlers:
              )
         # Use edit_message_text for callbacks (like start_back)
         elif update.callback_query:
-             # This part might be needed if start_command is called from a callback
-             await update.callback_query.edit_message_text(
-                 text=welcome_text,
-                 reply_markup=reply_markup
-             )
+            # If called from a callback, edit the message
+            await update.callback_query.edit_message_text(
+                text=welcome_text,
+                reply_markup=reply_markup,
+                parse_mode="MarkdownV2"
+            )
+
 
 
 
@@ -1153,7 +1147,7 @@ class StartHelpHandlers:
             ])
 
         keyboard.append([
-            InlineKeyboardButton("🔙 العودة", callback_data="start_back")
+            InlineKeyboardButton("🔙 العودة", callback_data="start_command")
         ])
 
         reply_markup = InlineKeyboardMarkup(keyboard)
