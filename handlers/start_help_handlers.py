@@ -824,7 +824,9 @@ class StartHelpHandlers:
 
 بعد ما تحصل على API ID و API Hash، اتبع التالي:
 	1\\. ادخل على هذا الموقع:
-👉 [Session String Generator](https://replit.com/@SpEcHiDe/GenerateStringSession)
+👉 [Session String Generator](https://telegram.tools/session-string-generator#telethon,user)
+
+
 	2\\. اختر *Telethon – User*
 	3\\. ضع:
 	   • *API ID*
@@ -853,7 +855,7 @@ class StartHelpHandlers:
 🔒 *الأمان أولاً\\!*"""
             
             keyboard = [
-                [InlineKeyboardButton("🔗 Session String Generator", url="https://replit.com/@SpEcHiDe/GenerateStringSession")],
+                [InlineKeyboardButton("🔗 Session String Generator", url="https://telegram.tools/session-string-generator#telethon,user")],
                 [InlineKeyboardButton("🌐 my.telegram.org", url="https://my.telegram.org")],
                 [InlineKeyboardButton("🔙 العودة", callback_data="start_back")] # Back to main start menu
             ]
